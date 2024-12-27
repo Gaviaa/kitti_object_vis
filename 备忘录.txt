@@ -1,0 +1,19 @@
+conda activate kitti_vis
+/home/gav/mmdet3d/data/kitti/training
+
+###雷达点颜色
+viz_util.py 163行
+
+###删除坐标轴,视场（两条斜线）
+viz_util.py 206行
+##删除方型区域
+viz_util.py 261行
+TOP_Y_MIN = -20
+TOP_Y_MAX = 20
+TOP_X_MIN = 0
+TOP_X_MAX = 40
+
+
+
+ conda activate kitti_vis
+python kitti_object.py --show_lidar_with_depth --img_fov --const_box --vis --show_image_with_boxes -p --ind 65
